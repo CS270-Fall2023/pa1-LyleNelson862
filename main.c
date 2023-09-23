@@ -12,12 +12,15 @@ int main()
     printf("\nNumber of Tokens: ");
     token = strtok(str, " ");
     printf("\nToken 1: %s", token);
-    token = strtok(NULL, " ");
-    printf("\nToken 2: %s", token);
-    token = strtok(NULL, " ");
-    printf("\nToken 3: %s", token);
-    printf("\nToken 4: \n");
-    // printf(&entry);
+
+    int count =2;
+    while((token = strtok(NULL, " "))!= NULL)
+    {
+        printf("\nToken %d",count);
+        printf(": %s", token);
+        count++;
+    }
+ 
 
     return 0;
 }
